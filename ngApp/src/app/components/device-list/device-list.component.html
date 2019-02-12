@@ -1,0 +1,32 @@
+<table class="table table-hover mt-5" *ngIf="deviceArr">
+  <thead>
+    <tr class="table-info">
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light" *ngFor="let device of deviceArr">
+      <td>{{ device._id }}</td>
+      <td>{{ device.name }}</td>
+      <td>{{ device.description }}</td>
+      <td class="btn-group">
+        <button
+          type="button"
+          class="btn btn-outline-warning mr-1"
+          (click)="delete(device._id)"
+        >
+          Delete</button
+        ><button
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="edit(device._id, device.name, device.description)"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

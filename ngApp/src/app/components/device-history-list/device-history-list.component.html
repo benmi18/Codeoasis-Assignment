@@ -1,0 +1,16 @@
+<table class="table table-hover mt-5" *ngIf="historyArr">
+  <thead>
+    <tr class="table-info">
+      <th scope="col">Device Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Room</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light" *ngFor="let deviceHistory of historyArr">
+      <td>{{ deviceHistory.device_name }}</td>
+      <td>{{ deviceHistory.department }}</td>
+      <td>{{ deviceHistory.room }}</td>
+    </tr>
+  </tbody>
+</table>
